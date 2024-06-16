@@ -1161,6 +1161,7 @@ public class Instrumentation {
         app.attach(context);
         String packageName = context.getPackageName();
         PixelPropsUtils.setProps(packageName);
+        com.android.internal.util.Utils.onNewApplication(context);
         return app;
     }
     
@@ -1180,6 +1181,7 @@ public class Instrumentation {
         app.attach(context);
         String packageName = context.getPackageName();
         PixelPropsUtils.setProps(packageName);
+        com.android.internal.util.Utils.onNewApplication(context);
         return app;
     }
 
