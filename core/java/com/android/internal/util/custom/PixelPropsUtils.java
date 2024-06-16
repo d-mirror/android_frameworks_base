@@ -401,15 +401,14 @@ public class PixelPropsUtils {
     }
 
     private static void spoofBuildGms() {
-        // Alter build parameters to avoid hardware attestation enforcement
-        setPropValue("BRAND", "Hisense");
-        setPropValue("MANUFACTURER", "Hisense");
-        setPropValue("DEVICE", "HS6735MT");
-        setPropValue("ID", "MRA58K");
-        setPropValue("FINGERPRINT", "Hisense/F30/HS6735MT:6.0/MRA58K/L1228.6.01.01:user/release-keys");
-        setPropValue("MODEL", "Hisense F30");
-        setPropValue("PRODUCT", "F30");
-        setVersionFieldString("SECURITY_PATCH", "2016-02-01");
+        // Alter build parameters to Nexus 6P for avoiding hardware attestation enforcement
+        setPropValue("BRAND", "google");
+        setPropValue("MANUFACTURER", "Google");
+        setPropValue("DEVICE", "sailfish");
+        setPropValue("FINGERPRINT", "google/sailfish/sailfish:8.1.0/OPM1.171019.011/4448085:user/release-keys");
+        setPropValue("MODEL", "Pixel");
+        setPropValue("PRODUCT", "sailfish");
+        setVersionFieldString("SECURITY_PATCH", "2017-12-05");
     }
 
     private static boolean isCallerSafetyNet() {
